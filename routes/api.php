@@ -22,3 +22,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('/users', function () {
     return User::all();
 });
+
+// single user
+Route::get('/users/{id}', function ($id) {
+    return User::findOrFail($id);
+});

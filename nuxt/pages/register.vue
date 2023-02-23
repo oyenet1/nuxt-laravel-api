@@ -21,7 +21,9 @@ interface RegisterPayload {
 }
 
 async function register(payload: RegisterPayload) {
-  const res = await axios.post("/register", payload)
+  const res = await axios.post("/api/register", payload)
+
+  console.log(res);
 }
 </script>
 <template>
