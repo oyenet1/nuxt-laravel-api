@@ -7,6 +7,7 @@
 /storage/*.key
 /vendor
 .env
+/nuxt
 .env.backup
 .env.production
 .phpunit.result.cache
