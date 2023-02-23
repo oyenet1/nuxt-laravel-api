@@ -12,6 +12,7 @@ const form = ref({
   password_confirmation: "",
 });
 
+// interface in typescript
 interface RegisterPayload {
   name: string,
   email: string,
@@ -20,7 +21,7 @@ interface RegisterPayload {
 }
 
 async function register(payload: RegisterPayload) {
-  const res = await axios.post("http://127.0.0.1:8000/register", payload)
+  const res = await axios.post("/register", payload)
 }
 </script>
 <template>
@@ -39,12 +40,12 @@ async function register(payload: RegisterPayload) {
 
       <label>
         <div>Password</div>
-        <input type="password" />
+        <input type="password" v-model="form.password" />
       </label>
 
       <label>
         <div>Confirm Password</div>
-        <input type="password" />
+        <input type="password" v-model="form.password_confirmation" />
       </label>
 
       <button class="btn">Register</button>
