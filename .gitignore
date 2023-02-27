@@ -1,12 +1,14 @@
 /.phpunit.cache
 /node_modules
 /nuxt/node_modules
+/frontend/node_modules
 /public/build
 /public/hot
 /public/storage
 /storage/*.key
 /vendor
 .env
+/nuxt
 .env.backup
 .env.production
 .phpunit.result.cache
